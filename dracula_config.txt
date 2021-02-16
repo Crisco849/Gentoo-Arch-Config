@@ -1,0 +1,3 @@
+sudo emerge picom
+sudo emerge alacritty
+sudo emerge polybar

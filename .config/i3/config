@@ -13,10 +13,11 @@
 gaps inner 15
 gaps outer 15
 
-for_window[class="^.*"] border pixel 2
+for_window[class="^.*"] border pixel 4
 
 #Colors
-client.focused #555555 #555555 #ffffff #2e9ef4     #CC0000
+#client.focused #555555 #555555 #ffffff #2e9ef4     #CC0000
+client.focused #B0E0E6 #B0E0E6 #B0E0E6 #B0E0E6	#B0E0E6
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -55,7 +56,7 @@ set $right semicolon
 floating_modifier Mod4
 
 # start a terminal
-bindsym Mod4+Return exec kitty
+bindsym Mod4+Return exec alacritty
 
 # kill focused window
 bindsym Mod4+Shift+q kill
@@ -63,8 +64,12 @@ bindsym Mod4+Shift+q kill
 #Copy and paste between GUI and terminals
 exec --no-startup-id clipit
 
+# Start brave
+bindsym Mod1+b exec brave-bin --no-sandbox
+
 # start dmenu (a program launcher)
-bindsym Mod4+d exec --no-startup-id dmenu_run
+#bindsym Mod4+d exec --no-startup-id dmenu_run
+bindsym Mod4+d exec rofi -show drun
 # A more modern dmenu replacement is rofi:
 # bindsym Mod4+d exec rofi -modi drun,run -show drun
 # There also is i3-dmenu-desktop which only displays applications shipping a
